@@ -18,7 +18,8 @@ public class accountContact
         Con.Title = Title;
         con.Primary_Contact__c=PrimaryContact;
         Con.AccountId = acct.id;
-        insert con;        
+        insert con; 
+		// this is a page reference
         PageReference pageref = new ApexPages.StandardController(acct).view();
      
         pageref.setRedirect(true);
